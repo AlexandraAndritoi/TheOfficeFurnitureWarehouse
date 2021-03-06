@@ -1,0 +1,24 @@
+﻿@page
+@model TheOfficeFurnitureWarehouse.Pages.Views.Products.ProductListModel
+@{
+}
+
+<h1>Products</h1>
+
+<table class="table">
+    @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.ProductType</td>
+                <td>@product.StandardPrice</td>
+                <td>@product.Quantity</td>
+                <td>
+                    <a class="btn btn-lg" asp-page="./EditProduct" asp-route-productId="@product.Id">
+                        <i class="fade fa-edit"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+</table>
+
+<a class="btn btn-primary" asp-page="./AddProduct">Add new</a>
