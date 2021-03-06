@@ -3,3 +3,7 @@ bin
 obj
 packages
 wwwroot/lib
+TheOfficeFurnitureWarehouse.Core/bin
+TheOfficeFurnitureWarehouse.Core/obj
+TheOfficeFurnitureWarehouse.Data/bin
+TheOfficeFurnitureWarehouse.Data/obj

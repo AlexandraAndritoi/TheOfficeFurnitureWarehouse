@@ -6,6 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="TheOfficeFurnitureWarehouse.Core\**" />
+    <Compile Remove="TheOfficeFurnitureWarehouse.Data\**" />
+    <Content Remove="TheOfficeFurnitureWarehouse.Core\**" />
+    <Content Remove="TheOfficeFurnitureWarehouse.Data\**" />
+    <EmbeddedResource Remove="TheOfficeFurnitureWarehouse.Core\**" />
+    <EmbeddedResource Remove="TheOfficeFurnitureWarehouse.Data\**" />
+    <None Remove="TheOfficeFurnitureWarehouse.Core\**" />
+    <None Remove="TheOfficeFurnitureWarehouse.Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove=".gitignore" />
   </ItemGroup>
 
