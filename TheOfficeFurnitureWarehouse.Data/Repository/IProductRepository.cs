@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using TheOfficeFurnitureWarehouse.Core.Models;
+using TheOfficeFurnitureWarehouse.Core.Model;
 
 namespace TheOfficeFurnitureWarehouse.Data.Repository
 {

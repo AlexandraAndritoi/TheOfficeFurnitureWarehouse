@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using TheOfficeFurnitureWarehouse.Core.Enums;
-using TheOfficeFurnitureWarehouse.Core.Models;
+using TheOfficeFurnitureWarehouse.Core.Enum;
+using TheOfficeFurnitureWarehouse.Core.Model;
 
 namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
 {

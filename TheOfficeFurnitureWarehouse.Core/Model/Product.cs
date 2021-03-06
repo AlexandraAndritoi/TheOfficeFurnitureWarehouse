@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using TheOfficeFurnitureWarehouse.Core.Enums;
+using TheOfficeFurnitureWarehouse.Core.Enum;
 
-namespace TheOfficeFurnitureWarehouse.Core.Models
+namespace TheOfficeFurnitureWarehouse.Core.Model
 {
     public class Product : IEntity
     {

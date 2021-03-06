@@ -1,4 +1,4 @@
-﻿namespace TheOfficeFurnitureWarehouse.Core.Enums
+﻿namespace TheOfficeFurnitureWarehouse.Core.Enum
 {
     public enum ProductType
     {

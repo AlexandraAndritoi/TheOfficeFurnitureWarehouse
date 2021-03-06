@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TheOfficeFurnitureWarehouse.Core.Models
+namespace TheOfficeFurnitureWarehouse.Core.Model
 {
     public class Customer : IEntity
     {

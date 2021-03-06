@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TheOfficeFurnitureWarehouse.Core.Models;
+using TheOfficeFurnitureWarehouse.Core.Model;
 
 namespace TheOfficeFurnitureWarehouse.Data
 {
