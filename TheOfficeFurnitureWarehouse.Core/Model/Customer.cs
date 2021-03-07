@@ -12,5 +12,7 @@ namespace TheOfficeFurnitureWarehouse.Core.Model
 
         [Required, StringLength(80)]
         public string Address { get; set; }
+
+        public int Discount { get; set; }
     }
 }

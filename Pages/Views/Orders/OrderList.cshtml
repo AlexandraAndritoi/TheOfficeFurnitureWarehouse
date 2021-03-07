@@ -1,0 +1,19 @@
+﻿@page
+@model TheOfficeFurnitureWarehouse.Pages.Views.Orders.OrderListModel
+@{
+}
+
+<h1>Orders</h1>
+
+<table class="table">
+    @foreach(var order in Model.Orders)
+    { 
+        <tr>
+            <td>@order.Customer.Name</td>
+            <td>@order.Product.Name</td>
+            <td>@order.Price</td>
+        </tr>
+    }
+</table>
+
+<a class="btn btn-primary" asp-page="./AddOrder">Add new</a>
