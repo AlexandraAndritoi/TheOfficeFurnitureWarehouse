@@ -34,19 +34,29 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
 
         public IActionResult OnPost(Guid productId)
         {
-            if (!ModelState.IsValid)
+            if (!IsValid())
             {
                 InitializeListOfProductTypes();
                 return Page();
             }
-            Product.Id = productId;
-            productService.Update(Product);
+            UpdateProduct(productId);
             return RedirectToPage("./ProductList");
         }
 
         private void InitializeListOfProductTypes()
         {
             ProducTypes = htmlHelper.GetEnumSelectList<ProductType>();
+        }
+
+        private bool IsValid()
+        {
+            return ModelState.IsValid;
+        }
+
+        private void UpdateProduct(Guid productId)
+        {
+            Product.Id = productId;
+            productService.Update(Product);
         }
     }
 }
