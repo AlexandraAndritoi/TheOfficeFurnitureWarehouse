@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheOfficeFurnitureWarehouse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheOfficeFurnitureWarehouse.Core", "TheOfficeFurnitureWarehouse.Core\TheOfficeFurnitureWarehouse.Core.csproj", "{5A59C084-A9B5-44AF-B428-FB76B0BBB696}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheOfficeFurnitureWarehouse.Business", "TheOfficeFurnitureWarehouse.Business\TheOfficeFurnitureWarehouse.Business.csproj", "{8526B84A-F0A8-43A9-BFDC-16C145ADDF5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5A59C084-A9B5-44AF-B428-FB76B0BBB696}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A59C084-A9B5-44AF-B428-FB76B0BBB696}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A59C084-A9B5-44AF-B428-FB76B0BBB696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8526B84A-F0A8-43A9-BFDC-16C145ADDF5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8526B84A-F0A8-43A9-BFDC-16C145ADDF5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8526B84A-F0A8-43A9-BFDC-16C145ADDF5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8526B84A-F0A8-43A9-BFDC-16C145ADDF5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using TheOfficeFurnitureWarehouse.Business.Services.Products;
 using TheOfficeFurnitureWarehouse.Core.Enum;
 using TheOfficeFurnitureWarehouse.Core.Model;
 
@@ -9,6 +10,7 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
 {
     public class AddProductModel : PageModel
     {
+        private readonly IProductService productService;
         private readonly IHtmlHelper htmlHelper;
 
         [BindProperty]
@@ -16,8 +18,9 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
 
         public IEnumerable<SelectListItem> ProducTypes { get; set; }
 
-        public AddProductModel(IHtmlHelper htmlHelper)
+        public AddProductModel(IProductService productService, IHtmlHelper htmlHelper)
         {
+            this.productService = productService;
             this.htmlHelper = htmlHelper;
         }
 
@@ -35,6 +38,7 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
                 InitializeListOfProductTypes();
                 return Page();
             }
+            productService.Create(Product);
             return RedirectToPage("./ProductList");
         }
 

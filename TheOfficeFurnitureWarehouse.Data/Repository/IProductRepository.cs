@@ -5,6 +5,6 @@ namespace TheOfficeFurnitureWarehouse.Data.Repository
 {
     public interface IProductRepository : IGenericRepository<Product>
     {
-        IEnumerable<Product> GetAllProductsOrderedByName();
+        IEnumerable<Product> GetProductsOrderedByName();
     }
 }

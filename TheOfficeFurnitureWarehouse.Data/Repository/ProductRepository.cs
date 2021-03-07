@@ -8,7 +8,7 @@ namespace TheOfficeFurnitureWarehouse.Data.Repository
     {
         public ProductRepository(TheOfficeFurnitureWarehouseDbContext dbContext) : base(dbContext) { }
 
-        public IEnumerable<Product> GetAllProductsOrderedByName()
+        public IEnumerable<Product> GetProductsOrderedByName()
         {
             return GetAll().OrderBy(_ => _.Name);
         }

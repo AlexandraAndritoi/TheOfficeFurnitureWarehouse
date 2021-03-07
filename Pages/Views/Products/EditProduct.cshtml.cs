@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using TheOfficeFurnitureWarehouse.Business.Services.Products;
 using TheOfficeFurnitureWarehouse.Core.Enum;
 using TheOfficeFurnitureWarehouse.Core.Model;
 
@@ -10,6 +11,7 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
 {
     public class EditProductModel : PageModel
     {
+        private readonly IProductService productService;
         private readonly IHtmlHelper htmlHelper;
 
         [BindProperty]
@@ -17,25 +19,28 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
 
         public IEnumerable<SelectListItem> ProducTypes { get; set; }
 
-        public EditProductModel(IHtmlHelper htmlHelper)
+        public EditProductModel(IProductService productService, IHtmlHelper htmlHelper)
         {
+            this.productService = productService;
             this.htmlHelper = htmlHelper;
         }
 
         public IActionResult OnGet(Guid productId)
         {
             InitializeListOfProductTypes();
-            Product = new Product();
+            Product = productService.GetProductById(productId);
             return Page();
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPost(Guid productId)
         {
             if (!ModelState.IsValid)
             {
                 InitializeListOfProductTypes();
                 return Page();
             }
+            Product.Id = productId;
+            productService.Update(Product);
             return RedirectToPage("./ProductList");
         }
 

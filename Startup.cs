@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TheOfficeFurnitureWarehouse.Business.Services.Products;
 using TheOfficeFurnitureWarehouse.Data;
 using TheOfficeFurnitureWarehouse.Data.Repository;
 
@@ -27,6 +28,7 @@ namespace TheOfficeFurnitureWarehouse
             });
 
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductService, ProductService>();
 
             services.AddRazorPages();
         }
