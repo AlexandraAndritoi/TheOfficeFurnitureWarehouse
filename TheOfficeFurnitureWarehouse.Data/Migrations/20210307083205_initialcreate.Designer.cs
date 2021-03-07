@@ -10,7 +10,7 @@ using TheOfficeFurnitureWarehouse.Data;
 namespace TheOfficeFurnitureWarehouse.Data.Migrations
 {
     [DbContext(typeof(TheOfficeFurnitureWarehouseDbContext))]
-    [Migration("20210306153614_initialcreate")]
+    [Migration("20210307083205_initialcreate")]
     partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,27 @@ namespace TheOfficeFurnitureWarehouse.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.3")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("TheOfficeFurnitureWarehouse.Core.Model.Customer", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Customers");
+                });
 
             modelBuilder.Entity("TheOfficeFurnitureWarehouse.Core.Model.Product", b =>
                 {

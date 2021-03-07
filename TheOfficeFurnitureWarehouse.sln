@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheOfficeFurnitureWarehouse", "TheOfficeFurnitureWarehouse.csproj", "{EA491248-92E5-46F3-B1BA-5FDAB1BA7AAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheOfficeFurnitureWarehouse.Data", "TheOfficeFurnitureWarehouse.Data\TheOfficeFurnitureWarehouse.Data.csproj", "{B0281C6C-198A-426F-A8FA-52995139C0C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheOfficeFurnitureWarehouse.Data", "TheOfficeFurnitureWarehouse.Data\TheOfficeFurnitureWarehouse.Data.csproj", "{B0281C6C-198A-426F-A8FA-52995139C0C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheOfficeFurnitureWarehouse.Core", "TheOfficeFurnitureWarehouse.Core\TheOfficeFurnitureWarehouse.Core.csproj", "{5A59C084-A9B5-44AF-B428-FB76B0BBB696}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheOfficeFurnitureWarehouse.Core", "TheOfficeFurnitureWarehouse.Core\TheOfficeFurnitureWarehouse.Core.csproj", "{5A59C084-A9B5-44AF-B428-FB76B0BBB696}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheOfficeFurnitureWarehouse.Business", "TheOfficeFurnitureWarehouse.Business\TheOfficeFurnitureWarehouse.Business.csproj", "{8526B84A-F0A8-43A9-BFDC-16C145ADDF5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheOfficeFurnitureWarehouse.Business", "TheOfficeFurnitureWarehouse.Business\TheOfficeFurnitureWarehouse.Business.csproj", "{8526B84A-F0A8-43A9-BFDC-16C145ADDF5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

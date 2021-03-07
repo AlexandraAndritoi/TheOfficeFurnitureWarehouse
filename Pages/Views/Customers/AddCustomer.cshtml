@@ -1,0 +1,18 @@
+﻿@page
+@model TheOfficeFurnitureWarehouse.Pages.Views.Customers.AddCustomerModel
+@{
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Customer.Name"></label>
+        <input class="form-control" asp-for="Customer.Name" />
+        <span class="text-danger" asp-validation-for="Customer.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Customer.Address"></label>
+        <input class="form-control" asp-for="Customer.Address" />
+        <span class="text-danger" asp-validation-for="Customer.Address"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

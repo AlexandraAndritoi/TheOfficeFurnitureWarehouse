@@ -8,6 +8,19 @@ namespace TheOfficeFurnitureWarehouse.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Customers",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Customers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
@@ -25,6 +38,9 @@ namespace TheOfficeFurnitureWarehouse.Data.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Customers");
+
             migrationBuilder.DropTable(
                 name: "Products");
         }

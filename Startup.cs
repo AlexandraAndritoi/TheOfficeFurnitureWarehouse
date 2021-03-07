@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TheOfficeFurnitureWarehouse.Business.Services.Customers;
 using TheOfficeFurnitureWarehouse.Business.Services.Products;
 using TheOfficeFurnitureWarehouse.Data;
 using TheOfficeFurnitureWarehouse.Data.Repository;
@@ -22,13 +23,9 @@ namespace TheOfficeFurnitureWarehouse
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContextPool<TheOfficeFurnitureWarehouseDbContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("TheOfficeFurnitureWarehouseDb"));
-            });
-
-            services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<IProductService, ProductService>();
+            ConfigureDbContext(services);
+            ConfigureRepositories(services);
+            ConfigureBusinessServices(services);
 
             services.AddRazorPages();
         }
@@ -58,6 +55,27 @@ namespace TheOfficeFurnitureWarehouse
             {
                 endpoints.MapRazorPages();
             });
+        }
+
+        private void ConfigureDbContext(IServiceCollection services)
+        {
+            services.AddDbContextPool<TheOfficeFurnitureWarehouseDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("TheOfficeFurnitureWarehouseDb"));
+            });
+        }
+
+        private void ConfigureRepositories(IServiceCollection services)
+        {
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+        }
+
+        private void ConfigureBusinessServices(IServiceCollection services)
+        {
+            services.AddScoped<ICreateCustomerService, CreateCustomerService>();
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IProductService, ProductService>();
         }
     }
 }
