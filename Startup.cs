@@ -6,10 +6,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TheOfficeFurnitureWarehouse.Business.PriceStrategyCreators;
 using TheOfficeFurnitureWarehouse.Business.Services.Customers;
+using TheOfficeFurnitureWarehouse.Business.Services.Orders;
 using TheOfficeFurnitureWarehouse.Business.Services.Prices;
 using TheOfficeFurnitureWarehouse.Business.Services.Products;
 using TheOfficeFurnitureWarehouse.Data;
 using TheOfficeFurnitureWarehouse.Data.Repository;
+using TheOfficeFurnitureWarehouse.Data.Repository.Orders;
 
 namespace TheOfficeFurnitureWarehouse
 {
@@ -71,6 +73,7 @@ namespace TheOfficeFurnitureWarehouse
         {
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
         }
 
         private void ConfigureBusinessServices(IServiceCollection services)
@@ -78,6 +81,7 @@ namespace TheOfficeFurnitureWarehouse
             services.AddScoped<ICreateCustomerService, CreateCustomerService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICreateOrderService, CreateOrderService>();
             services.AddScoped<IPriceService, PriceService>();
             services.AddScoped<IPriceStrategyCreator, PriceStrategyCreator>();
         }
