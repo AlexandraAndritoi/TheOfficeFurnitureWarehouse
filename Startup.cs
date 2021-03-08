@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TheOfficeFurnitureWarehouse.Business.PriceStrategyCreators;
 using TheOfficeFurnitureWarehouse.Business.Services.Customers;
+using TheOfficeFurnitureWarehouse.Business.Services.Prices;
 using TheOfficeFurnitureWarehouse.Business.Services.Products;
 using TheOfficeFurnitureWarehouse.Data;
 using TheOfficeFurnitureWarehouse.Data.Repository;
@@ -77,7 +78,7 @@ namespace TheOfficeFurnitureWarehouse
             services.AddScoped<ICreateCustomerService, CreateCustomerService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IProductService, ProductService>();
-            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IPriceService, PriceService>();
             services.AddScoped<IPriceStrategyCreator, PriceStrategyCreator>();
         }
     }
