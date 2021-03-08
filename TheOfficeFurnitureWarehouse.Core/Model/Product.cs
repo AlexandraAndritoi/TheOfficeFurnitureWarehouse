@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using TheOfficeFurnitureWarehouse.Core.Enum;
+using TheOfficeFurnitureWarehouse.Core.Enums;
 
 namespace TheOfficeFurnitureWarehouse.Core.Model
 {
