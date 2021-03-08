@@ -10,7 +10,7 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
 {
     public class AddProductModel : PageModel
     {
-        private readonly IProductService productService;
+        private readonly ICreateProductService createProductService;
         private readonly IHtmlHelper htmlHelper;
 
         [BindProperty]
@@ -18,9 +18,9 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
 
         public IEnumerable<SelectListItem> ProducTypes { get; set; }
 
-        public AddProductModel(IProductService productService, IHtmlHelper htmlHelper)
+        public AddProductModel(ICreateProductService createProductService, IHtmlHelper htmlHelper)
         {
-            this.productService = productService;
+            this.createProductService = createProductService;
             this.htmlHelper = htmlHelper;
         }
 
@@ -38,7 +38,7 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
                 InitializeListOfProductTypes();
                 return Page();
             }
-            productService.Create(Product);
+            createProductService.Create(Product);
             return RedirectToPage("./ProductList");
         }
 

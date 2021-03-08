@@ -9,7 +9,6 @@ namespace TheOfficeFurnitureWarehouse.Business.Services.Products
     {
         Product GetProductById(Guid id);
         IEnumerable<Product> GetProductsOrderedByName();
-        void Create(Product product);
         void Update(Product product);
     }
 }

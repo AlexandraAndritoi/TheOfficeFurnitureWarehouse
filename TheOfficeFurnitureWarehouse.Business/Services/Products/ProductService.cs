@@ -14,12 +14,6 @@ namespace TheOfficeFurnitureWarehouse.Business.Services.Products
             this.productRepository = productRepository;
         }
 
-        public void Create(Product product)
-        {
-            productRepository.Create(product);
-            productRepository.Commit();
-        }
-
         public Product GetProductById(Guid id)
         {
             return productRepository.GetById(id);
