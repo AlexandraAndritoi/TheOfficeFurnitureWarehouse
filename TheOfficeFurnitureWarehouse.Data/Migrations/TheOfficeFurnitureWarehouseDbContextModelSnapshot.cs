@@ -30,6 +30,9 @@ namespace TheOfficeFurnitureWarehouse.Data.Migrations
                         .HasMaxLength(80)
                         .HasColumnType("nvarchar(80)");
 
+                    b.Property<int>("Discount")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(80)
@@ -38,6 +41,30 @@ namespace TheOfficeFurnitureWarehouse.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Customers");
+                });
+
+            modelBuilder.Entity("TheOfficeFurnitureWarehouse.Core.Model.Order", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("CustomerId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid?>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("TheOfficeFurnitureWarehouse.Core.Model.Product", b =>
@@ -63,6 +90,21 @@ namespace TheOfficeFurnitureWarehouse.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("TheOfficeFurnitureWarehouse.Core.Model.Order", b =>
+                {
+                    b.HasOne("TheOfficeFurnitureWarehouse.Core.Model.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId");
+
+                    b.HasOne("TheOfficeFurnitureWarehouse.Core.Model.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId");
+
+                    b.Navigation("Customer");
+
+                    b.Navigation("Product");
                 });
 #pragma warning restore 612, 618
         }

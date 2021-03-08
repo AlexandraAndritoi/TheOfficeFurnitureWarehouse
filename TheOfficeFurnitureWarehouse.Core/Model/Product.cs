@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using TheOfficeFurnitureWarehouse.Core.Enum;
 
 namespace TheOfficeFurnitureWarehouse.Core.Model
@@ -16,6 +17,7 @@ namespace TheOfficeFurnitureWarehouse.Core.Model
 
         [Required]
         [Range(0, 999.99)]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal StandardPrice { get; set; }
 
         [Required]
