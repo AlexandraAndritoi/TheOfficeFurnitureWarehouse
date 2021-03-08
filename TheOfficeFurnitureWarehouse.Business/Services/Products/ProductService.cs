@@ -23,11 +23,5 @@ namespace TheOfficeFurnitureWarehouse.Business.Services.Products
         {
             return productRepository.GetProductsOrderedByName();
         }
-
-        public void Update(Product product)
-        {
-            productRepository.Update(product);
-            productRepository.Commit();
-        }
     }
 }

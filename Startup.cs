@@ -81,6 +81,7 @@ namespace TheOfficeFurnitureWarehouse
             services.AddScoped<ICreateCustomerService, CreateCustomerService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<ICreateProductService, CreateProductService>();
+            services.AddScoped<IUpdateProductService, UpdateProductService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ICreateOrderService, CreateOrderService>();
             services.AddScoped<IPriceService, PriceService>();

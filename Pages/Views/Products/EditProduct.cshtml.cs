@@ -12,6 +12,7 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
     public class EditProductModel : PageModel
     {
         private readonly IProductService productService;
+        private readonly IUpdateProductService updateProductService;
         private readonly IHtmlHelper htmlHelper;
 
         [BindProperty]
@@ -19,9 +20,10 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
 
         public IEnumerable<SelectListItem> ProducTypes { get; set; }
 
-        public EditProductModel(IProductService productService, IHtmlHelper htmlHelper)
+        public EditProductModel(IProductService productService, IUpdateProductService updateProductService, IHtmlHelper htmlHelper)
         {
             this.productService = productService;
+            this.updateProductService = updateProductService;
             this.htmlHelper = htmlHelper;
         }
 
@@ -56,7 +58,7 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
         private void UpdateProduct(Guid productId)
         {
             Product.Id = productId;
-            productService.Update(Product);
+            updateProductService.Update(Product);
         }
     }
 }
