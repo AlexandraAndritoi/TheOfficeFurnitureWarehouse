@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using TheOfficeFurnitureWarehouse.Core.Model;
+using TheOfficeFurnitureWarehouse.Core.Models;
 
 namespace TheOfficeFurnitureWarehouse.Data.Repository
 {

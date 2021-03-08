@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using TheOfficeFurnitureWarehouse.Core.Model;
+using TheOfficeFurnitureWarehouse.Core.Models;
 
 namespace TheOfficeFurnitureWarehouse.Pages.Views.Orders
 {

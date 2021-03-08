@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using TheOfficeFurnitureWarehouse.Business.Services.Products;
-using TheOfficeFurnitureWarehouse.Core.Model;
+using TheOfficeFurnitureWarehouse.Core.Models;
 
 namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
 {

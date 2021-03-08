@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using TheOfficeFurnitureWarehouse.Business.Services.Customers;
-using TheOfficeFurnitureWarehouse.Core.Model;
+using TheOfficeFurnitureWarehouse.Core.Models;
 
 namespace TheOfficeFurnitureWarehouse.Pages.Views.Customers
 {

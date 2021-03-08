@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using TheOfficeFurnitureWarehouse.Core.Enums;
 
-namespace TheOfficeFurnitureWarehouse.Core.Model
+namespace TheOfficeFurnitureWarehouse.Core.Models
 {
     public class Product : IEntity
     {

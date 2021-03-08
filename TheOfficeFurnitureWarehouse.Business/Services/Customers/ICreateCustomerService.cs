@@ -1,4 +1,4 @@
-﻿using TheOfficeFurnitureWarehouse.Core.Model;
+﻿using TheOfficeFurnitureWarehouse.Core.Models;
 
 namespace TheOfficeFurnitureWarehouse.Business.Services.Customers
 {

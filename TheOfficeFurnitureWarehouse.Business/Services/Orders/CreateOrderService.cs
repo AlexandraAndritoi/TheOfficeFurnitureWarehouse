@@ -1,4 +1,4 @@
-﻿using TheOfficeFurnitureWarehouse.Core.Model;
+﻿using TheOfficeFurnitureWarehouse.Core.Models;
 using TheOfficeFurnitureWarehouse.Data.Repository;
 using TheOfficeFurnitureWarehouse.Data.Repository.Orders;
 

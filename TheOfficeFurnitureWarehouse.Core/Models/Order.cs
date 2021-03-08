@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TheOfficeFurnitureWarehouse.Core.Model
+namespace TheOfficeFurnitureWarehouse.Core.Models
 {
     public class Order : IEntity
     {
