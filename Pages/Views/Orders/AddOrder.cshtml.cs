@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using TheOfficeFurnitureWarehouse.Business.Services.Customers;
+using TheOfficeFurnitureWarehouse.Business.Services.Prices;
 using TheOfficeFurnitureWarehouse.Business.Services.Products;
 using TheOfficeFurnitureWarehouse.Extensions;
 using TheOfficeFurnitureWarehouse.ViewModels;
@@ -13,6 +14,7 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Orders
     {
         private readonly ICustomerService customerService;
         private readonly IProductService productService;
+        private readonly IPriceService priceService;
 
         [BindProperty]
         public OrderCreateViewModel Order { get; set; }
@@ -21,10 +23,11 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Orders
 
         public IEnumerable<SelectListItem> Products { get; set; }
 
-        public AddOrderModel(ICustomerService customerService, IProductService productService)
+        public AddOrderModel(ICustomerService customerService, IProductService productService, IPriceService priceService)
         {
             this.customerService = customerService;
             this.productService = productService;
+            this.priceService = priceService;
         }
 
         public IActionResult OnGet()
@@ -37,6 +40,7 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Orders
         public IActionResult OnPostCalculate()
         {
             InitializeListsOfCustomersAndProducts();
+            Order.Price = priceService.CalculatePrice(Order.Customer, Order.Product, Order.Quantity);
             return Page();
         }
 
