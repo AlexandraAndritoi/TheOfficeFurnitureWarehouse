@@ -17,10 +17,9 @@ namespace TheOfficeFurnitureWarehouse.Core.Model
         public ProductType ProductType { get; set; }
 
         [Required]
-        [Display(Name = "Standard Price")]
         [Range(0, 999.99)]
         [Column(TypeName = "decimal(18,2)")]
-        public decimal StandardPrice { get; set; }
+        public decimal Price { get; set; }
 
         [Required]
         public int Quantity { get; set; }
