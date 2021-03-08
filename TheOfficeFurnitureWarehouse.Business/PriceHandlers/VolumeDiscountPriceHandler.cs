@@ -1,22 +1,20 @@
-﻿using TheOfficeFurnitureWarehouse.Core.Model;
-
-namespace TheOfficeFurnitureWarehouse.Business.PriceHandlers
+﻿namespace TheOfficeFurnitureWarehouse.Business.PriceHandlers
 {
     internal class VolumeDiscountPriceHandler : AbstractDiscountPriceHandler
     {
         // In an enterprise solution this value would be stored in the database
         private const int volumeDicount = 10;
 
-        public override decimal Handle(Product product, int quantity)
+        public override decimal Handle(decimal productPrice, int quantity)
         {
             if (nextHandler != null)
             {
-                var salesPrice = nextHandler.Handle(product, quantity);
+                var salesPrice = nextHandler.Handle(productPrice, quantity);
                 return CalculateDiscountFromSalesPrice(salesPrice);
             }
             else
             {
-                return CalculteDiscountFromStandardPrice(product, quantity);
+                return CalculteDiscountFromStandardPrice(productPrice, quantity);
             }
         }
 
@@ -27,9 +25,9 @@ namespace TheOfficeFurnitureWarehouse.Business.PriceHandlers
             return salesPrice;
         }
 
-        private decimal CalculteDiscountFromStandardPrice(Product product, int quantity)
+        private decimal CalculteDiscountFromStandardPrice(decimal productPrice, int quantity)
         {
-            var standardPrice = CalculateProductStandardPrice(product, quantity);
+            var standardPrice = CalculateProductPrice(productPrice, quantity);
             var volumeDiscountValue = GetVolumeDiscountOf(standardPrice);
             return standardPrice - volumeDiscountValue;
         }

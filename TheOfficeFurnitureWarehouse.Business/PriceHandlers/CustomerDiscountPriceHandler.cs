@@ -1,26 +1,24 @@
-﻿using TheOfficeFurnitureWarehouse.Core.Model;
-
-namespace TheOfficeFurnitureWarehouse.Business.PriceHandlers
+﻿namespace TheOfficeFurnitureWarehouse.Business.PriceHandlers
 {
     internal class CustomerDiscountPriceHandler : AbstractDiscountPriceHandler
     {
-        private readonly Customer customer;
+        private readonly decimal customerDiscount;
 
-        public CustomerDiscountPriceHandler(Customer customer)
+        public CustomerDiscountPriceHandler(decimal customerDiscount)
         {
-            this.customer = customer;
+            this.customerDiscount = customerDiscount;
         }
 
-        public override decimal Handle(Product product, int quantity)
+        public override decimal Handle(decimal productPrice, int quantity)
         {
             if(nextHandler != null)
             {
-                var salesPrice = nextHandler.Handle(product, quantity);
+                var salesPrice = nextHandler.Handle(productPrice, quantity);
                 return CalculateDiscountFromSalesPrice(salesPrice);
             }
             else
             {
-                return CalculateDiscountFromStandardPrice(product, quantity);
+                return CalculateDiscountFromStandardPrice(productPrice, quantity);
             }
         }
 
@@ -31,16 +29,16 @@ namespace TheOfficeFurnitureWarehouse.Business.PriceHandlers
             return salesPrice;
         }
 
-        private decimal CalculateDiscountFromStandardPrice(Product product, int quantity)
+        private decimal CalculateDiscountFromStandardPrice(decimal productPrice, int quantity)
         {
-            var standardPrice = CalculateProductStandardPrice(product, quantity);
+            var standardPrice = CalculateProductPrice(productPrice, quantity);
             var customerDiscoutValue = GetCustomerDiscountOf(standardPrice);
             return standardPrice - customerDiscoutValue;
         }
 
         private decimal GetCustomerDiscountOf(decimal price)
         {
-            return (price * customer.Discount) / 100;
+            return (price * customerDiscount) / 100;
         }
     }
 }

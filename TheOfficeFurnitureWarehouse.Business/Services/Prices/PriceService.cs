@@ -23,7 +23,7 @@ namespace TheOfficeFurnitureWarehouse.Business.Services.Prices
 
             var priceStrategy = priceStrategyCreator.GetStrategy();
 
-            return priceStrategy.CalculatePrice(customer, product, quantity);
+            return priceStrategy.CalculatePrice(customer.Discount, product.StandardPrice, quantity);
         }
     }
 }

@@ -1,12 +1,10 @@
-﻿using TheOfficeFurnitureWarehouse.Core.Model;
-
-namespace TheOfficeFurnitureWarehouse.Business.PriceHandlers
+﻿namespace TheOfficeFurnitureWarehouse.Business.PriceHandlers
 {
     internal abstract class AbstractDiscountPriceHandler : IDiscountPriceHandler
     {
         protected IDiscountPriceHandler nextHandler;
 
-        public abstract decimal Handle(Product product, int quantity);
+        public abstract decimal Handle(decimal productPrice, int quantity);
 
         public IDiscountPriceHandler SetNextHandler(IDiscountPriceHandler handler)
         {
@@ -14,9 +12,9 @@ namespace TheOfficeFurnitureWarehouse.Business.PriceHandlers
             return handler;
         }
 
-        protected decimal CalculateProductStandardPrice(Product product, int quantity)
+        protected decimal CalculateProductPrice(decimal productPrice, int quantity)
         {
-            return product.StandardPrice * quantity;
+            return productPrice * quantity;
         }
 
         // maybe enhance with more checks
