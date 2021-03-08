@@ -79,7 +79,7 @@ namespace TheOfficeFurnitureWarehouse
         private void ConfigureBusinessServices(IServiceCollection services)
         {
             services.AddScoped<ICreateCustomerService, CreateCustomerService>();
-            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IReadCustomerService, ReadCustomerService>();
             services.AddScoped<ICreateProductService, CreateProductService>();
             services.AddScoped<IUpdateProductService, UpdateProductService>();
             services.AddScoped<IReadProductService, ReadProductService>();

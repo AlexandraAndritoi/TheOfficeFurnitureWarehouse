@@ -7,11 +7,11 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Customers
 {
     public class CustomerListModel : PageModel
     {
-        private readonly ICustomerService customerService;
+        private readonly IReadCustomerService customerService;
 
         public IEnumerable<Customer> Customers { get; set; }
 
-        public CustomerListModel(ICustomerService customerService)
+        public CustomerListModel(IReadCustomerService customerService)
         {
             this.customerService = customerService;
         }

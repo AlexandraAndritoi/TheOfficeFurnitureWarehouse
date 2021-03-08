@@ -4,11 +4,11 @@ using TheOfficeFurnitureWarehouse.Data.Repository;
 
 namespace TheOfficeFurnitureWarehouse.Business.Services.Customers
 {
-    public class CustomerService : ICustomerService
+    public class ReadCustomerService : IReadCustomerService
     {
         private readonly ICustomerRepository customerRepository;
 
-        public CustomerService(ICustomerRepository customerRepository)
+        public ReadCustomerService(ICustomerRepository customerRepository)
         {
             this.customerRepository = customerRepository;
         }
