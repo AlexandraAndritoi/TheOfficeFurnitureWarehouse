@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 using TheOfficeFurnitureWarehouse.Business.Services.Customers;
 using TheOfficeFurnitureWarehouse.Business.Services.Products;
 using TheOfficeFurnitureWarehouse.Extensions;
@@ -15,6 +17,10 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Orders
         [BindProperty]
         public OrderCreateViewModel Order { get; set; }
 
+        public IEnumerable<SelectListItem> Customers { get; set; }
+
+        public IEnumerable<SelectListItem> Products { get; set; }
+
         public AddOrderModel(ICustomerService customerService, IProductService productService)
         {
             this.customerService = customerService;
@@ -23,20 +29,25 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Orders
 
         public IActionResult OnGet()
         {
-            Order = new OrderCreateViewModel
-            {
-                Customers = customerService.GetCustomersOrderedByName().GetAsSelectListItems(),
-                Products = productService.GetProductsOrderedByName().GetAsSelectListItems(),
-            };
+            Order = new OrderCreateViewModel();
+            InitializeListsOfCustomersAndProducts();
             return Page();
         }
 
-        public void OnPostCalculate()
+        public IActionResult OnPostCalculate()
         {
+            InitializeListsOfCustomersAndProducts();
+            return Page();
         }
 
         public void OnPostSave()
         {
+        }
+
+        private void InitializeListsOfCustomersAndProducts()
+        {
+            Customers = customerService.GetCustomersOrderedByName().GetAsSelectListItems();
+            Products = productService.GetProductsOrderedByName().GetAsSelectListItems();
         }
     }
 }
