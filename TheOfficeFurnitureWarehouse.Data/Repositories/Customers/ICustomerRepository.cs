@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using TheOfficeFurnitureWarehouse.Core.Models;
 
-namespace TheOfficeFurnitureWarehouse.Data.Repository.Customers
+namespace TheOfficeFurnitureWarehouse.Data.Repositories.Customers
 {
     public interface ICustomerRepository : IGenericRepository<Customer>
     {

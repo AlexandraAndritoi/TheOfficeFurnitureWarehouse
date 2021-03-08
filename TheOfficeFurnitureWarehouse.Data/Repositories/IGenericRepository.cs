@@ -2,7 +2,7 @@
 using System.Linq;
 using TheOfficeFurnitureWarehouse.Core;
 
-namespace TheOfficeFurnitureWarehouse.Data.Repository
+namespace TheOfficeFurnitureWarehouse.Data.Repositories
 {
     public interface IGenericRepository<TEntity> where TEntity : class, IEntity
     {

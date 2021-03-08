@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using TheOfficeFurnitureWarehouse.Core;
 
-namespace TheOfficeFurnitureWarehouse.Data.Repository
+namespace TheOfficeFurnitureWarehouse.Data.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class, IEntity
     {

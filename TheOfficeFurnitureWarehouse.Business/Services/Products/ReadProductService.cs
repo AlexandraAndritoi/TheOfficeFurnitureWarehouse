@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using TheOfficeFurnitureWarehouse.Core.Models;
-using TheOfficeFurnitureWarehouse.Data.Repository.Products;
+using TheOfficeFurnitureWarehouse.Data.Repositories.Products;
 
 namespace TheOfficeFurnitureWarehouse.Business.Services.Products
 {
