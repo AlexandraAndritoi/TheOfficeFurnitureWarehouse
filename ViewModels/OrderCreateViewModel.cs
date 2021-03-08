@@ -11,6 +11,10 @@ namespace TheOfficeFurnitureWarehouse.ViewModels
         public string Product { get; set; }
 
         [Required]
+        [Range(0, 999.99)]
         public decimal Price { get; set; }
+
+        [Required]
+        public int Quantity { get; set; }
     }
 }

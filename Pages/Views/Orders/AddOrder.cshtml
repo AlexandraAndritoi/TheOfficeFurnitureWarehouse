@@ -14,6 +14,11 @@
         <select class="form-control" asp-for="Order.Product" asp-items="Model.Products"></select>
         <span class="text-danger" asp-validation-for="Order.Product"></span>
     </div>
+    <div class="form-group">
+        <label asp-for="Order.Quantity"></label>
+        <input class="form-control" asp-for="Order.Quantity" />
+        <span class="text-danger" asp-validation-for="Order.Quantity"></span>
+    </div>
     <button class="btn btn-default">Calculate price</button>
 </form>
 
