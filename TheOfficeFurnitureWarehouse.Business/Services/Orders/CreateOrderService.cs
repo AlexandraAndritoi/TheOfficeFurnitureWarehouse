@@ -1,5 +1,6 @@
 ﻿using TheOfficeFurnitureWarehouse.Core.Models;
 using TheOfficeFurnitureWarehouse.Data.Repository;
+using TheOfficeFurnitureWarehouse.Data.Repository.Customers;
 using TheOfficeFurnitureWarehouse.Data.Repository.Orders;
 
 namespace TheOfficeFurnitureWarehouse.Business.Services.Orders

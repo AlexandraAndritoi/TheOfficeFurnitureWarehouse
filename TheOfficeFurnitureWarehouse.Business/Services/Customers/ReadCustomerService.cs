@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using TheOfficeFurnitureWarehouse.Core.Models;
-using TheOfficeFurnitureWarehouse.Data.Repository;
+using TheOfficeFurnitureWarehouse.Data.Repository.Customers;
 
 namespace TheOfficeFurnitureWarehouse.Business.Services.Customers
 {
