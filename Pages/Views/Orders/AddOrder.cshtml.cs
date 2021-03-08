@@ -14,7 +14,7 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Orders
     public class AddOrderModel : PageModel
     {
         private readonly ICustomerService customerService;
-        private readonly IProductService productService;
+        private readonly IReadProductService productService;
         private readonly IPriceService priceService;
         private readonly ICreateOrderService createOrderService;
 
@@ -25,7 +25,7 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Orders
 
         public IEnumerable<SelectListItem> Products { get; set; }
 
-        public AddOrderModel(ICustomerService customerService, IProductService productService, IPriceService priceService, ICreateOrderService createOrderService)
+        public AddOrderModel(ICustomerService customerService, IReadProductService productService, IPriceService priceService, ICreateOrderService createOrderService)
         {
             this.customerService = customerService;
             this.productService = productService;

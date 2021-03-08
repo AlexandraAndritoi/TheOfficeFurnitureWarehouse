@@ -4,7 +4,7 @@ using TheOfficeFurnitureWarehouse.Core.Model;
 
 namespace TheOfficeFurnitureWarehouse.Business.Services.Products
 {
-    public interface IProductService
+    public interface IReadProductService
     {
         Product GetProductById(Guid id);
         IEnumerable<Product> GetProductsOrderedByName();

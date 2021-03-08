@@ -5,11 +5,11 @@ using TheOfficeFurnitureWarehouse.Data.Repository;
 
 namespace TheOfficeFurnitureWarehouse.Business.Services.Products
 {
-    public class ProductService : IProductService
+    public class ReadProductService : IReadProductService
     {
         private readonly IProductRepository productRepository;
 
-        public ProductService(IProductRepository productRepository)
+        public ReadProductService(IProductRepository productRepository)
         {
             this.productRepository = productRepository;
         }

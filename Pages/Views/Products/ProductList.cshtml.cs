@@ -7,11 +7,11 @@ namespace TheOfficeFurnitureWarehouse.Pages.Views.Products
 {
     public class ProductListModel : PageModel
     {
-        private readonly IProductService productService;
+        private readonly IReadProductService productService;
 
         public IEnumerable<Product> Products { get; set; }
 
-        public ProductListModel(IProductService productService)
+        public ProductListModel(IReadProductService productService)
         {
             this.productService = productService;
         }
