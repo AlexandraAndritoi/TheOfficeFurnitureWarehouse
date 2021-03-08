@@ -1,5 +1,5 @@
 ﻿using TheOfficeFurnitureWarehouse.Core.Models;
-using TheOfficeFurnitureWarehouse.Data.Repository;
+using TheOfficeFurnitureWarehouse.Data.Repository.Products;
 
 namespace TheOfficeFurnitureWarehouse.Business.Services.Products
 {

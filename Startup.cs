@@ -10,9 +10,9 @@ using TheOfficeFurnitureWarehouse.Business.Services.Orders;
 using TheOfficeFurnitureWarehouse.Business.Services.Prices;
 using TheOfficeFurnitureWarehouse.Business.Services.Products;
 using TheOfficeFurnitureWarehouse.Data;
-using TheOfficeFurnitureWarehouse.Data.Repository;
 using TheOfficeFurnitureWarehouse.Data.Repository.Customers;
 using TheOfficeFurnitureWarehouse.Data.Repository.Orders;
+using TheOfficeFurnitureWarehouse.Data.Repository.Products;
 
 namespace TheOfficeFurnitureWarehouse
 {

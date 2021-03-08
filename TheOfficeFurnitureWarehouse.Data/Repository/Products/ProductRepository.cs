@@ -2,7 +2,7 @@
 using System.Linq;
 using TheOfficeFurnitureWarehouse.Core.Models;
 
-namespace TheOfficeFurnitureWarehouse.Data.Repository
+namespace TheOfficeFurnitureWarehouse.Data.Repository.Products
 {
     public class ProductRepository : GenericRepository<Product>, IProductRepository
     {

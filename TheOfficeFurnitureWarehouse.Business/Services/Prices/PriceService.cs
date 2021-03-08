@@ -1,6 +1,6 @@
 ﻿using TheOfficeFurnitureWarehouse.Business.PriceStrategyCreators;
-using TheOfficeFurnitureWarehouse.Data.Repository;
 using TheOfficeFurnitureWarehouse.Data.Repository.Customers;
+using TheOfficeFurnitureWarehouse.Data.Repository.Products;
 
 namespace TheOfficeFurnitureWarehouse.Business.Services.Prices
 {
