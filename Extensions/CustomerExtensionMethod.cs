@@ -9,10 +9,7 @@ namespace TheOfficeFurnitureWarehouse.Extensions
     {
         public static IEnumerable<SelectListItem> GetAsSelectListItems(this IEnumerable<Customer>  customers)
         {
-            var selectListItems = customers.Select(_ => new SelectListItem { Value = _.Name, Text = _.Name }).ToList();
-            var defaultItem = new SelectListItem { Value = null, Text = "--- select customer ---" };
-            selectListItems.Add(defaultItem);
-            return selectListItems;
+            return customers.Select(_ => new SelectListItem { Value = _.Name, Text = _.Name }).ToList();
         }
     }
 }
