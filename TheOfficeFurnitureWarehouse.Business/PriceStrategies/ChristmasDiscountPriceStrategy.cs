@@ -10,10 +10,8 @@ namespace TheOfficeFurnitureWarehouse.Business.PriceStrategies
             var volumeDiscoutPriceHandler = new VolumeDiscountPriceHandler();
             var christmasDiscountPriceHandler = new ChristmasDiscountPriceHandler();
 
-            return customerDiscountPriceHandler
-                .SetNextHandler(volumeDiscoutPriceHandler)
-                .SetNextHandler(christmasDiscountPriceHandler)
-                .Handle(productPrice, quantity);
+            customerDiscountPriceHandler.SetNextHandler(volumeDiscoutPriceHandler).SetNextHandler(christmasDiscountPriceHandler);
+            return customerDiscountPriceHandler.Handle(productPrice, quantity);
         }
     }
 }
