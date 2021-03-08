@@ -10,7 +10,7 @@ using TheOfficeFurnitureWarehouse.Data;
 namespace TheOfficeFurnitureWarehouse.Data.Migrations
 {
     [DbContext(typeof(TheOfficeFurnitureWarehouseDbContext))]
-    [Migration("20210308051122_initialcreate")]
+    [Migration("20210308132042_initialcreate")]
     partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,6 +60,9 @@ namespace TheOfficeFurnitureWarehouse.Data.Migrations
                     b.Property<Guid?>("ProductId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
@@ -80,14 +83,14 @@ namespace TheOfficeFurnitureWarehouse.Data.Migrations
                         .HasMaxLength(80)
                         .HasColumnType("nvarchar(80)");
 
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<int>("ProductType")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
-
-                    b.Property<decimal>("StandardPrice")
-                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
