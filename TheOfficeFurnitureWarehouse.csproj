@@ -6,12 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="TheOfficeFurnitureWarehouse.Business\**" />
     <Compile Remove="TheOfficeFurnitureWarehouse.Core\**" />
     <Compile Remove="TheOfficeFurnitureWarehouse.Data\**" />
+    <Content Remove="TheOfficeFurnitureWarehouse.Business\**" />
     <Content Remove="TheOfficeFurnitureWarehouse.Core\**" />
     <Content Remove="TheOfficeFurnitureWarehouse.Data\**" />
+    <EmbeddedResource Remove="TheOfficeFurnitureWarehouse.Business\**" />
     <EmbeddedResource Remove="TheOfficeFurnitureWarehouse.Core\**" />
     <EmbeddedResource Remove="TheOfficeFurnitureWarehouse.Data\**" />
+    <None Remove="TheOfficeFurnitureWarehouse.Business\**" />
     <None Remove="TheOfficeFurnitureWarehouse.Core\**" />
     <None Remove="TheOfficeFurnitureWarehouse.Data\**" />
   </ItemGroup>
@@ -29,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="TheOfficeFurnitureWarehouse.Business\TheOfficeFurnitureWarehouse.Business.csproj" />
     <ProjectReference Include="TheOfficeFurnitureWarehouse.Core\TheOfficeFurnitureWarehouse.Core.csproj" />
     <ProjectReference Include="TheOfficeFurnitureWarehouse.Data\TheOfficeFurnitureWarehouse.Data.csproj" />
   </ItemGroup>
