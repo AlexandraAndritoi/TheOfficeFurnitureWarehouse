@@ -13,6 +13,7 @@ using TheOfficeFurnitureWarehouse.Data;
 using TheOfficeFurnitureWarehouse.Data.Repositories.Customers;
 using TheOfficeFurnitureWarehouse.Data.Repositories.Orders;
 using TheOfficeFurnitureWarehouse.Data.Repositories.Products;
+using TheOfficeFurnitureWarehouse.Data.UnitOfWork;
 
 namespace TheOfficeFurnitureWarehouse
 {
@@ -75,6 +76,7 @@ namespace TheOfficeFurnitureWarehouse
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<ICreateOrderUoW, CreateOrderUoW>();
         }
 
         private void ConfigureBusinessServices(IServiceCollection services)
