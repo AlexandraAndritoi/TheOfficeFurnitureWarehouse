@@ -73,23 +73,23 @@ namespace TheOfficeFurnitureWarehouse
 
         private void ConfigureRepositories(IServiceCollection services)
         {
-            services.AddScoped<ICustomerRepository, CustomerRepository>();
-            services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<ICreateOrderUoW, CreateOrderUoW>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
         }
 
         private void ConfigureBusinessServices(IServiceCollection services)
         {
             services.AddScoped<ICreateCustomerService, CreateCustomerService>();
-            services.AddScoped<IReadCustomerService, ReadCustomerService>();
-            services.AddScoped<ICreateProductService, CreateProductService>();
-            services.AddScoped<IUpdateProductService, UpdateProductService>();
-            services.AddScoped<IReadProductService, ReadProductService>();
             services.AddScoped<ICreateOrderService, CreateOrderService>();
-            services.AddScoped<IReadOrderService, ReadOrderService>();
+            services.AddScoped<ICreateProductService, CreateProductService>();
             services.AddScoped<IPriceService, PriceService>();
             services.AddScoped<IPriceStrategyCreator, PriceStrategyCreator>();
+            services.AddScoped<IReadCustomerService, ReadCustomerService>();
+            services.AddScoped<IReadOrderService, ReadOrderService>();
+            services.AddScoped<IReadProductService, ReadProductService>();
+            services.AddScoped<IUpdateProductService, UpdateProductService>();
         }
     }
 }
