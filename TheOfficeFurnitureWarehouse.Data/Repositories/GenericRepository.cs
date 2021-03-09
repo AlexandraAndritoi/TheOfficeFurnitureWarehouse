@@ -7,7 +7,7 @@ namespace TheOfficeFurnitureWarehouse.Data.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class, IEntity
     {
-        private readonly TheOfficeFurnitureWarehouseDbContext dbContext;
+        protected readonly TheOfficeFurnitureWarehouseDbContext dbContext;
 
         public GenericRepository(TheOfficeFurnitureWarehouseDbContext dbContext)
         {

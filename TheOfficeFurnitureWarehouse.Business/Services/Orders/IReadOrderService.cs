@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using TheOfficeFurnitureWarehouse.Core.Models;
 
-namespace TheOfficeFurnitureWarehouse.Data.Repositories.Orders
+namespace TheOfficeFurnitureWarehouse.Business.Services.Orders
 {
-    public interface IOrderRepository : IGenericRepository<Order>
+    public interface IReadOrderService
     {
         IEnumerable<Order> GetOrdersOrderedByPrice();
     }
