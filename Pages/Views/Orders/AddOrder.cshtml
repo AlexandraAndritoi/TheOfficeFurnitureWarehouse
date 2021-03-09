@@ -23,6 +23,11 @@
 </form>
 
 <form method="post" asp-page-handler="save">
+    <div style="display:none">
+        <select class="form-control" asp-for="Order.Customer" asp-items="Model.Customers"></select>
+        <select class="form-control" asp-for="Order.Product" asp-items="Model.Products"></select>
+        <input class="form-control" asp-for="Order.Quantity" />
+    </div>
     <div class="form-group">
         <label asp-for="Order.Price"></label>
         <input class="form-control" asp-for="Order.Price" readonly="readonly" />
