@@ -1,9 +1,9 @@
 # TheOfficeFurnitureWarehouse
 
 **Database commands**
-dotnet-ef migrations add initialcreate -s ../TheOfficeFurnitureWarehouse.csproj
-dotnet-ef database update -s ../TheOfficeFurnitureWarehouse.csproj
-dotnet-ef database drop -s ../TheOfficeFurnitureWarehouse.csproj
+* dotnet-ef migrations add initialcreate -s ../TheOfficeFurnitureWarehouse.csproj
+* dotnet-ef database update -s ../TheOfficeFurnitureWarehouse.csproj
+* dotnet-ef database drop -s ../TheOfficeFurnitureWarehouse.csproj
 
 
 **Further general improvements:**
